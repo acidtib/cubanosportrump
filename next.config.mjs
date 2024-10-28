@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/cubanosportrump", // for github pages to work on github.io domain
+  // basePath: "/cubanosportrump", // for github pages to work on github.io domain
   output: "export"
 };
 
