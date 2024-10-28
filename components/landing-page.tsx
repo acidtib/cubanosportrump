@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle, Menu, X, Star } from "lucide-react"
 import { useState } from "react"
 
+import Image from "next/image"
+import HarrisWalz_Logo from "../public/HarrisWalz_Logo.svg"
+
 export function LandingPageComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -29,9 +32,11 @@ export function LandingPageComponent() {
               Get Involved
             </a>
           </nav>
-          <Button className="hidden bg-red-600 text-white hover:bg-red-700 md:inline-flex">
-            Donate Now
-          </Button>
+          <a href="https://secure.actblue.com/donate/drc-hvf-web" target="_blank">
+            <Button className="hidden bg-red-600 text-white hover:bg-red-700 md:inline-flex">
+              Donate Now
+            </Button>
+          </a>
           <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -56,6 +61,7 @@ export function LandingPageComponent() {
           </nav>
         )}
       </header>
+
       <main>
         <section className="bg-gradient-to-b from-blue-50 to-white">
           <div className="container mx-auto px-4 py-16 text-center md:py-32">
@@ -102,48 +108,54 @@ export function LandingPageComponent() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="mb-8 text-3xl font-bold md:text-4xl">Stand With Us</h2>
             <p className="mb-8 text-xl">Your support can make a difference. Join our campaign today!</p>
-            <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
-              Volunteer Now
-            </Button>
+            <a href="https://go.kamalaharris.com" target="_blank" rel="noopener noreferrer" className="block">
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100">
+                Volunteer Now
+              </Button>
+            </a>
           </div>
         </section>
       </main>
+
       <footer className="bg-blue-900 text-white">
-  <div className="container mx-auto px-4 py-12">
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-      <div>
-        <h3 className="mb-4 text-lg font-semibold">Smith for America</h3>
-        <p className="text-sm text-blue-200">Together, we can build a brighter future for our nation.</p>
-      </div>
-      <div>
-        <h4 className="mb-4 text-sm font-semibold uppercase">Quick Links</h4>
-        <ul className="space-y-2 text-sm">
-          <li><a href="#" className="hover:text-blue-300">Home</a></li>
-          <li><a href="#" className="hover:text-blue-300">About</a></li>
-          <li><a href="#" className="hover:text-blue-300">Issues</a></li>
-          <li><a href="#" className="hover:text-blue-300">Get Involved</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 className="mb-4 text-sm font-semibold uppercase">Connect</h4>
-        <ul className="space-y-2 text-sm">
-          <li><a href="#" className="hover:text-blue-300">Facebook</a></li>
-          <li><a href="#" className="hover:text-blue-300">Twitter</a></li>
-          <li><a href="#" className="hover:text-blue-300">Instagram</a></li>
-          <li><a href="#" className="hover:text-blue-300">YouTube</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 className="mb-4 text-sm font-semibold uppercase">Contact</h4>
-        <p className="text-sm text-blue-200">123 Freedom Street<br />Washington, D.C. 20001</p>
-        <p className="mt-2 text-sm text-blue-200">info@smithforamerica.com</p>
-      </div>
-    </div>
-    <div className="mt-8 border-t border-blue-800 pt-8 text-center">
-      <p className="text-sm text-blue-300">© 2024 Smith for America. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+            <div className="text-center">
+              <a href="https://kamalaharris.com/" target="_blank" rel="noopener noreferrer">
+                <Image src={HarrisWalz_Logo} alt="Harris Walz Logo" width={190} height={109} className="mx-auto" />
+              </a>
+            </div>
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase">Quick Links</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="https://kamalaharris.com/meet-kamala-harris/" target="_blank" className="hover:text-blue-300">Meet Kamala</a></li>
+                <li><a href="https://kamalaharris.com/meet-tim-walz/" target="_blank" className="hover:text-blue-300">Meet Tim</a></li>
+                <li><a href="https://kamalaharris.com/issues/" target="_blank" className="hover:text-blue-300">Issues</a></li>
+                <li><a href="https://kamalaharris.com/faqs/" target="_blank" className="hover:text-blue-300">FAQS</a></li>
+                <li><a href="https://go.kamalaharris.com" target="_blank" className="hover:text-blue-300">Volunteer</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase">Connect</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="https://www.twitch.tv/kamalaharris" target="_blank" className="hover:text-blue-300">Twitch</a></li>
+                <li><a href="https://www.facebook.com/KamalaHarris/" target="_blank" className="hover:text-blue-300">Facebook</a></li>
+                <li><a href="https://x.com/kamalaharris" target="_blank" className="hover:text-blue-300">Twitter</a></li>
+                <li><a href="https://www.instagram.com/kamalaharris/" target="_blank" className="hover:text-blue-300">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@kamalaharris" target="_blank" className="hover:text-blue-300">YouTube</a></li>
+              </ul>
+            </div>
+            <div>
+              {/* <h4 className="mb-4 text-sm font-semibold uppercase">Contact</h4> */}
+              <p className="text-sm text-blue-200">Support our presidential campaign to elect Kamala Harris by signing up to <a href="https://go.kamalaharris.com/" target="_blank" className="">volunteer</a> or <a href="https://secure.actblue.com/donate/drc-hvf-web" target="_blank" className="">making a donation</a> online.</p>
+              <p className="mt-2 text-sm text-blue-200">To contribute by mail, please <a href="https://kamalaharris.com/donate-by-mail/" target="_blank">click here</a>.</p>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-blue-800 pt-8 text-center">
+            <p className="text-sm text-blue-300">...</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
