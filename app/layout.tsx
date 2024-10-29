@@ -49,6 +49,7 @@ export default function RootLayout({
           src="https://cloud.umami.is/script.js"
           data-website-id="6a103978-4b9a-4166-9482-9da3bf1394be"
         />
+        <meta name="msvalidate.01" content="2A0070FCDE7A83E899CD2ACEE0C11C31" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
