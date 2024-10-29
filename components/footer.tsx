@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-blue-800 pt-8 text-center">
-          <p className="text-sm text-blue-300">...</p>
+          <p className="text-sm text-blue-300">Este sitio web fue creado por un cubano encabronado. <br /><a href="https://github.com/acidtib/cubanosportrump" className="underline">Ver el código fuente en GitHub</a>.</p>
         </div>
       </div>
     </footer>
