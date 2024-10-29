@@ -8,30 +8,30 @@ import { ArrowRight } from "lucide-react"
 import { Header } from "./header"
 import { Footer } from "./footer"
 
-export function LandingPageComponent() {
+const impactfulMessages = [
+  {
+    title: "¡Por la libertad que luchamos! ¡No a Trump!",
+    content: "Un paso atrás para nuestra libertad, un salto hacia la división. Juntos, forjemos un camino hacia la justicia y la igualdad."
+  },
+  {
+    title: "¡Libertad sí, Trump no!",
+    content: "Por un futuro mejor para nuestra nación, donde todos sean escuchados y respetados."
+  },
+  {
+    title: "¡No a la intolerancia!",
+    content: "¡Sí a la inclusión y la diversidad! Un futuro donde cada voz cuente, sin divisiones ni muros."
+  },
+  {
+    title: "¡Unidos por la esperanza!",
+    content: "Construyamos un mañana lleno de oportunidades para todos, donde la solidaridad sea nuestra guía."
+  },
+  {
+    title: "¡Por la soberanía que defendemos!",
+    content: "Levantemos nuestras voces contra la opresión y trabajemos por un país que abrace su diversidad."
+  }
+];
 
-  const impactfulMessages = [
-    {
-      title: "¡Por la libertad que luchamos! ¡No a Trump!",
-      content: "Un paso atrás para nuestra libertad, un salto hacia la división. Juntos, forjemos un camino hacia la justicia y la igualdad."
-    },
-    {
-      title: "¡Libertad sí, Trump no!",
-      content: "Por un futuro mejor para nuestra nación, donde todos sean escuchados y respetados."
-    },
-    {
-      title: "¡No a la intolerancia!",
-      content: "¡Sí a la inclusión y la diversidad! Un futuro donde cada voz cuente, sin divisiones ni muros."
-    },
-    {
-      title: "¡Unidos por la esperanza!",
-      content: "Construyamos un mañana lleno de oportunidades para todos, donde la solidaridad sea nuestra guía."
-    },
-    {
-      title: "¡Por la soberanía que defendemos!",
-      content: "Levantemos nuestras voces contra la opresión y trabajemos por un país que abrace su diversidad."
-    }
-  ];
+export function LandingPageComponent() {
 
   const [message, setMessage] = useState({ title: '', content: '' });
 
